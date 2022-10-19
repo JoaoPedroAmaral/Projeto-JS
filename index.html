@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto JavaScript</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--https://blog.depositphotos.com/br/paletas-de-cores-cyberpunk.html-->
+    <h1 class=titulo>Projeto JS</h1>
+    <form action="#clicked">
+        <div class="ordem_botao">
+            <button onclick="Dobro()" class=botao>Calcular o Dobro</button>
+            <button onclick="Hora()"  class=botao>Transformar Dias em Horas</button>
+            <button onclick="Media()"  class=botao>Calcular Media</button>
+            <button onclick="IMC()"  class=botao>Calcular o IMC</button>
+        </div>
+        <div class="ordem_botao">
+
+            <button onclick="Retangulo()"  class=botao>Calcular Area do Retangulo</button>
+            <button onclick="Vida()"  class=botao>Calcular Dias de Vida</button>
+            <button onclick="Voto()"  class=botao>Calcular Total de Votos</button>
+            <button onclick="Carro()"  class=botao>Custo do Carro</button>
+        </div>
+        <div class="ordem_botao">
+            <button onclick="Ganho()"  class=botao>Calcular Ganhos do Mês</button>
+            <button onclick=" Par()" class=botao>Par ou Impar</button>
+            <button onclick="Dobrar()" class=botao>Dobrar Vetor</button>
+            <button onclick="Inverter()" class=botao>Inverter Vetor</button>
+        </div>
+        <div class="ordem_botao">
+            <button onclick="Cadastro()" class=botao>Cadastrar e Localizar Nome</button>
+            <button onclick="Maior()" class=botao>Achar o Maior Valor do Vetor</button>
+            <button onclick="Gerador()" class=botao>Gerador de Tabuada</button>
+            <button onclick="Fechar()" class=botao_fechar>Fechar</button>
+        </div>
+    </form>
+
+    <div id="clicked">
+        <!-- botao 1-->
+        <div id="div_dobro" hidden>
+            <h2>Digite um numero para ser dobrado</h2>
+            <form action="#resposta1">
+                <div>
+                    <input type="number" id="num_dobro">
+                        <button onclick="CalcularDobro()" class="submit">Calcular</button>
+                </div>
+            </form>
+            <p class="resposta" id="resposta1">
+        </div>
+        <!-- botao 2-->
+        <div id="div_hora" hidden>
+            <h2>Digite o numero de dias que deseja ser convertido em hora!!</h2>
+            <form action="#resposta2">
+                <div>
+                    <input id="num_hora">
+                    <button onclick="transformarEmHora()" class="submit">Calcular</button>
+                </div>
+            </form>
+            <p class="resposta" id="resposta2"></p>
+        </div>
+        <!-- botao 3-->
+        <div id="div_media" hidden>
+            <h2>Digite as notas do seu semestre para calcular a media</h2>
+            <form action="#resposta3">
+                <div>                
+                    <input type="number" placeholder="1° semestre" id="num_1semestre">
+                </div>
+                    <input type="number" placeholder="2° semestre" id="num_2semestre">
+                    <button onclick="calcularMedia()" class="submit">Calcular</button>
+            </form>
+            <p class="resposta" id="resposta3"></p>
+        </div>
+        <!--botao 4-->
+        <div id="div_imc" hidden>
+            <h2>Digite seu peso e altura para saber seu IMC</h2>
+            <form action="#resposta4">
+                <div>                
+                    <input type="number" placeholder="Digite seu peso aqui" id="num_peso">
+                </div>
+                <input type="text" placeholder="Digite sua altura aqui" id="num_altura">
+                <button onclick="calcularImc()" class="submit">Calcular</button>
+            </form>
+            <p class="resposta" id="resposta4"></p>
+        </div> 
+        <!-- botao 5-->
+        <div id="div_area" hidden>
+            <h2>Digite os lados do retangulo para calcular a area </h2>
+            <form action="#resposta5">
+                <div>
+                    <input type="number" placeholder="Digite o lado A" id="numA">
+                </div>
+                    <input type="number" placeholder="Digite o lado B" id="numB">
+                <button onclick="calcularArea()" class="submit">Calcular</button>
+            </form>
+            <p class="resposta" id="resposta5"></p>
+        </div>
+        <!-- botao 6-->
+        <div id="div_vida" hidden>
+            <h2>Descubra quantos dias você já viveu!!</h2>
+            <form action="#resposta6">
+                <div>
+                    <input type="number" placeholder="Digite sua idade, em anos" id="numIdade">
+                </div>
+                <div>
+                    <input type="number" placeholder="Digite os meses após o seu aniversario" id="numMes">
+                </div>
+                <input type="number" placeholder="Digite os dias após o seu aniversario" id="numDia">
+                <button onclick="calcularIdade()" class="submit">Calcular</button>
+            </form>
+            <p class="resposta" id="resposta6"></p>
+        </div>
+        <!-- botao 7-->
+        <div id="div_voto" hidden>
+            <h2>Calculador de votos</h2>
+            <form action="#resposta7">
+                <div>
+                    <input type="number" placeholder="Numero de votos brancos" id="numBranco">
+                </div>
+                <div>
+                    <input type="number" placeholder="Numero de votos nulos" id="numNulo">
+                </div>
+                <div>
+                    <input type="number" placeholder="Numero de votos Validos" id="numValido">
+                    <button onclick="calcularVotos()" class="submit">Calcular</button>
+                </div>
+            </form>
+            <p class="resposta" id="resposta7"></p>
+            <p class="resposta" id="resposta7.1"></p>
+        </div>
+        <!-- botao 8-->
+        <div id="div_carro" hidden>
+            <h2>Veja o custo de seu carro!</h2>
+            <form action="#resposta8">
+                    <input type="number" id="custo" placeholder="Insira o valor do carro">
+                <button class="submit" onclick="calcularCarro()">calcular</button>
+            </form>
+            <p class="resposta" id="resposta8"></p>
+        </div>
+        <!-- botao 9 -->
+        <div id="div_ganho" hidden>
+            <h2>Descubra seu ganho do mês vendendo carros!!!</h2>
+            <form action="#resposta9">
+                <div>
+                    <input type="number" id="total" placeholder="Quantia de carros vendidos">
+                </div>
+                <div>
+                    <input type="number" id="valor" placeholder="O valor de vendas">
+                </div>
+                <div>
+                    <input type="number" id="salario" placeholder="Escreva seu salario">
+                </div>
+                <input type="number" id="carro" placeholder="valor de cada carro">
+                <button class="submit" onclick="calcularCarro()">Calcular</button>
+            </form>
+            <p class="resposta" id="resposta9"></p>
+        </div>
+        <!-- botao 10-->
+        <div id="div_par" hidden>
+             <h2>Descobrir se um numero é par ou impar!</h2>
+             <form action="#resposta10">
+                <input type="number" id="numPar" placeholder="Digite um numero">
+                <button class="submit" onclick="calcularPar()">Descobrir</button>
+             </form>
+             <p class="resposta" id="resposta10"></p>
+        </div>
+        <!-- botao 11-->
+        <div id="div_dobra" hidden>
+            <h2 id="valorDob">Dobre os valores do seu Vetor</h2>
+            <p class="resposta" id="contadorD"></p>
+            <h2 id="mult" hidden>Digite o valor a ser multiplicado</h2>
+            <form action="#resposta11">
+                <input type="number" id="numVetor" placeholder="digite os valores, até 10">
+                <button onclick="enviarVetor()" class="submit">Enviar</button>
+                <button id="refazerD" onclick="refazerDobro()" class="submit" hidden>Refazer</button>
+            </form>
+            <p class="resposta" id="resposta11"></p>
+        </div>
+        <!-- botao 12-->
+        <div id="div_inverter" hidden>
+            <h2>Inverter um vetor!</h2>
+            <p class="resposta" id="contadorI"></p>
+            <form action="#resposta12">
+                <input type="number" id="numInverter" placeholder="adicione 20 valores">
+                <button onclick="inverterVetor()" class="submit">Inverter</button>
+                <button id="refazerI" onclick="refazerInv()" class="submit" hidden>Refazer</button>
+            </form>
+            <p class="resposta" id="resposta12"></p>
+        </div>
+        <!-- botao 13 -->
+        <div id="div_Cadastro" hidden>
+            <h2 id="add">Adicionar Nome!</h2>
+            <h2 id="loc" hidden>Localizar Nome!</h2>
+            <p class="resposta" id="contadorC"></p>
+            <form action="#resposta13">
+                <input type="text" id="numAdd" placeholder="adicione 10 nomes">
+                <input type="text" id="numLoc" placeholder="pesquise o nome" hidden>
+                <button onclick="cadastrar()" class="submit">Enviar</button>
+                <button id="refazerN" onclick="refazerNome()" class="submit" hidden>Refazer</button>
+            </form>
+            <p class="resposta" id="resposta13"></p>
+        </div>
+        <!-- botao 14 -->
+        <div id="div_Maior" hidden>
+            <h2>Achar o maior numero do vetor!</h2>
+            <p class="resposta" id="contadorM"></p>
+            <form action="#resposta14">
+                <input type="number" id="numAchar" placeholder="adicione 10 valores">
+                <button onclick="acharMaiorVetor()" class="submit">Enviar</button>
+                <button id="refazerM" onclick="refazerMaior()" class="submit" hidden>Refazer</button>
+            </form>
+            <p class="resposta" id="resposta14"></p>
+        </div>
+        <!-- botao 15-->
+        <div id="div_tabuada" hidden>
+            <h2>Tabuada!</h2>
+            <form action="#1">
+                <input type="number" id="numTabuada" placeholder="adicione o valor">
+                <select id="operador" class="operador">
+                    <option class="opcao"></option>
+                    <option value="1" class="opcao"> Adição </option>
+                    <option value="2" class="opcao"> Subtração </option>
+                    <option value="3" class="opcao"> Multiplicação </option>
+                    <option value="4" class="opcao"> Divisão </option>
+                </select>
+                <button onclick="gerar()" class="submit">Enviar</button>
+            </form>
+            <p class="resposta" id="0"></p>
+            <p class="resposta" id="1"></p>
+            <p class="resposta" id="2"></p>
+            <p class="resposta" id="3"></p>
+            <p class="resposta" id="4"></p>
+            <p class="resposta" id="5"></p>
+            <p class="resposta" id="6"></p>
+            <p class="resposta" id="7"></p>
+            <p class="resposta" id="8"></p>
+            <p class="resposta" id="9"></p>
+            <p class="resposta" id="10"></p>
+        </div>
+    </div>
+</body>
+</html>

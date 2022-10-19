@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color: #01012b;
+}
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #05d9e8;
+}
+
+.ordem_botao{
+    align-items: center;
+    text-align: center;
+    padding: 1%;
+}
+
+.botao{
+    border: 0;
+    font-weight: bold;
+    background-color: transparent;
+    color: #05d9e8;
+    border: #ff124f solid 2px;
+    width: 200px;
+    height: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 12px;
+}
+.botao_fechar{
+    border: 0;
+    font-weight: bold;
+    background-color: transparent;
+    color: #05d9e8;
+    border: #05d9e8 solid 2px;
+    width: 200px;
+    height: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 12px;
+}
+
+.botao:hover, .botao_fechar:hover {
+    background-color: #d1f7ff;
+    color: #ff124f;
+}
+
+.titulo{
+    color: #ff124f;
+    text-shadow: 1px 1px #d1f7ff;
+    font-family: 'Silkscreen', cursive;
+    text-align: center;
+    margin: 5%;
+    font-size: 40px;
+}
+
+h2{
+    color: #ff124f;
+    font-family: 'Silkscreen', cursive;
+    margin-top: 6%;
+    margin-left: 20px;
+}
+
+input{
+    background-color: transparent;
+    border: #ff124f solid 1px;
+    color: #d1f7ff;
+    outline: none;
+    width: 20%;
+    height: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.submit{
+    border: 0;
+    font-weight: bold;
+    background-color: transparent;
+    color: #ff124f;
+    border: #ff124f solid 1px;
+    height: 22px;
+    width: 10%;
+
+}
+
+.submit:hover{
+    background-color: #d1f7ff;
+}
+
+.resposta{
+    color: #05d9e8;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.operador{
+    border: 0;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    color: #05d9e8;
+    border: #ff124f solid 1px;
+    height: 22px;
+    width: 10%;
+}
+
+select option{
+    color:#05d9e8;
+    background:#01012b;
+  }
