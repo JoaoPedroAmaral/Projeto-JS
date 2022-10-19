@@ -702,17 +702,7 @@ function acharMaiorVetor(){
     }
     
 }
-function refazerMaior(){
-    while (vetor14.length > 0){
-        vetor14.pop()
-        contador14 = vetor14.length
-    }
-    console.log(vetor14)
-    console.log(contador14)
-    document.getElementById("contadorM").textContent = ""
-    document.getElementById("resposta14").textContent = ""
-    document.getElementById("refazerN").hidden = true;
-}
+ 
 // botao 15 
 function Gerador(){
     div_dobro = document.getElementById("div_dobro");
@@ -759,34 +749,53 @@ function gerar(){
                     document.getElementById(`${i}`).textContent= `${num} + ${i} = ${tab[i]}`
                     i++
                 }while(i<=10)
+                document.getElementById("apagar").hidden = false;
             break;
         case "2":
             do{
                 tab.push(num - i);
-                document.getElementById(`${i}`).textContent= `${num} + ${i} = ${tab[i]}`
+                document.getElementById(`${i}`).textContent= `${num} - ${i} = ${tab[i]}`
                 i++
             }while(i<=10)
+            document.getElementById("apagar").hidden = false;
             break;
         case "3":
             do{
                 tab.push(num * i);
-                document.getElementById(`${i}`).textContent= `${num} + ${i} = ${tab[i]}`
+                document.getElementById(`${i}`).textContent= `${num} x ${i} = ${tab[i]}`
                 i++
             }while(i<=10)
+            document.getElementById("apagar").hidden = false;
             break;
         case "4":
             do{
                 tab.push(num / i);
-                document.getElementById(`${i}`).textContent= `${num} + ${i} = ${tab[i]}`
+                document.getElementById(`${i}`).textContent= `${num} % ${i} = ${tab[i]}`
                 i++
             }while(i<=10)
+            document.getElementById("apagar").hidden = false;
             break;
         default:
             document.getElementById(`${i}`).textContent = "Por favor selecione um operador!"
             break;
     }
 }
+function Apagar(){
+    document.getElementById(`0`).textContent = ""
+    document.getElementById(`1`).textContent = ""
+    document.getElementById(`2`).textContent = ""
+    document.getElementById(`3`).textContent = ""
+    document.getElementById(`4`).textContent = ""
+    document.getElementById(`5`).textContent = ""
+    document.getElementById(`6`).textContent = ""
+    document.getElementById(`7`).textContent = ""
+    document.getElementById(`8`).textContent = ""
+    document.getElementById(`9`).textContent = ""
+    document.getElementById(`10`).textContent = ""
+    document.getElementById("apagar").hidden = true;
 
+}
+    
 function Fechar(){
     div_dobro = document.getElementById("div_dobro");
     div_hora = document.getElementById("div_hora");
